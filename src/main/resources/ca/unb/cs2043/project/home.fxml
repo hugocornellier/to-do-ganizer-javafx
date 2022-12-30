@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Accordion?>
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ca.unb.cs2043.project.HomeController">
+    <top>
+        <MenuBar fx:id="menuBar">
+            <Menu text="File">
+                <MenuItem onAction="#create_list" text="New List"/>
+            </Menu>
+            <Menu text="Help">
+                <MenuItem onAction="#help" text="Help"/>
+                <MenuItem onAction="#about_us" text="About"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <VBox>
+            <VBox fx:id="alerts_vbox" spacing="10.0">
+                <Label fx:id="my_alerts">My Alerts</Label>
+                <Separator />
+            </VBox>
+            <VBox fx:id="login_vbox" spacing="10.0">
+                <Label fx:id="login_label">Login</Label>
+                <Separator/>
+                <Button fx:id="login_btn" onAction="#login_to_system" text="Login"/>
+            </VBox>
+        </VBox>
+    </left>
+    <right>
+        <VBox fx:id="list_vbox" spacing="10.0">
+            <Label fx:id="my_lists">My Lists</Label>
+            <Separator />
+            <ListView fx:id="listView" prefHeight="650">
+            </ListView>
+            <HBox spacing="15">
+                <Button onAction="#create_list" text="New List"/>
+                <Button onAction="#open_list" fx:id="open_list" disable="true" text="Open List"/>
+                <Button onAction="#delete_list" fx:id="delete_list" disable="true" text="Delete List"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>

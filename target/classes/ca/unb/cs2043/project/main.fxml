@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane id="AnchorPane" fx:id="root" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.unb.cs2043.project.MainController"
+            prefHeight="550" prefWidth="800">
+</BorderPane>
